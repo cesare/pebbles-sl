@@ -32,6 +32,8 @@
 #include <unistd.h>
 #include "sl.h"
 
+#include <ruby.h>
+
 static int ACCIDENT  = 0;
 static int LOGO      = 0;
 static int FLY       = 0;
@@ -67,13 +69,14 @@ static void option(char *str)
     }
 }
 
-static void main(int argc, char *argv[])
+static VALUE run(int argc, VALUE* argv, VALUE self)
 {
     int x, i;
 
-    for (i = 1; i < argc; ++i) {
-	if (*argv[i] == '-') {
-	    option(argv[i] + 1);
+    for (i = 0; i < argc; ++i) {
+	char* arg = RSTRING_PTR(argv[i]);
+	if (*arg == '-') {
+	    option(arg + 1);
 	}
     }
     initscr();
@@ -230,4 +233,10 @@ static int add_smoke(int y, int x)
 	S[sum].ptrn = 0; S[sum].kind = sum % 2;
 	sum ++;
     }
+}
+
+void Init_sl() {
+    VALUE pebblesModule = rb_define_module("Pebbles");
+    VALUE pebblesSlModule = rb_define_module_under(pebblesModule, "SL");
+    rb_define_singleton_method(pebblesSlModule, "run", run, -1);
 }
