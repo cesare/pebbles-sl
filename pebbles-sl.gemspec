@@ -1,4 +1,4 @@
-# -*- mode: ruby; encoding: utf-8 -*-
+# -*- mode: ruby; coding: utf-8 -*-
 
 Gem::Specification.new do |s|
   s.name        = "pebbles-sl"
