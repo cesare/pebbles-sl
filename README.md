@@ -12,7 +12,7 @@ Run the SL on your terminal.
 
 in your terminal, or
 
-	require 'pebbles-sl'
+	require 'pebbles/sl'
 	Pebbles::SL.run
 
 in your Ruby script
