@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "pebbles-sl"
-  s.version     = "0.0.1"
+  s.version     = "0.9.1"
   s.authors     = ["SAWADA Tadashi"]
   s.email       = ["cesare@mayverse.jp"]
   s.homepage    = "https://github.com/cesare/pebbles-sl"
