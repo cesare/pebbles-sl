@@ -36,6 +36,14 @@ static int ACCIDENT  = 0;
 static int LOGO      = 0;
 static int FLY       = 0;
 
+static int my_mvaddstr(int y, int x, char *str);
+static void option(char *str);
+static int add_sl(int x);
+static add_D51(int x);
+static int add_man(int y, int x);
+static int add_smoke(int y, int x);
+
+
 static int my_mvaddstr(int y, int x, char *str)
 {
     for ( ; x < 0; ++x, ++str)
