@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+
+require 'pebbles/sl'
+Pebbles::SL.run(*ARGV)
