@@ -4,15 +4,15 @@ Run the SL on your terminal.
 
 # Installation
 
-  $ gem install pebbles-sl
+	$ gem install pebbles-sl
 
 # Usage
 
-  $ sl
+	$ sl
 
 in your terminal, or
 
-  require 'pebbles-sl'
-  Pebbles::SL.run
+	require 'pebbles-sl'
+	Pebbles::SL.run
 
 in your Ruby script
